@@ -31,7 +31,7 @@ import { latLngToString, serializer, toTimestamp } from "./serialize";
 
 import { defaultAxiosInstance } from "./client";
 
-export interface DistanceMatrixRequestParams extends RequestParams {
+export interface DistanceMatrixRequestParams {
   /**
    * The starting point for calculating travel distance and time.
    * You can supply one or more locations separated by the pipe character (`|`), in the form of an address, latitude/longitude coordinates,
@@ -150,7 +150,7 @@ export interface DistanceMatrixRequestParams extends RequestParams {
 }
 
 export interface DistanceMatrixRequest extends Partial<Omit<AxiosRequestConfig, 'params'>> {
-  params: DistanceMatrixRequestParams;
+  params: DistanceMatrixRequestParams & RequestParams;
 }
 
 export interface DistanceMatrixResponseData extends ResponseData {
