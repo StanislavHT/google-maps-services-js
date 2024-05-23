@@ -31,7 +31,7 @@ import { latLngToString, serializer, toTimestamp } from "./serialize";
 
 import { defaultAxiosInstance } from "./client";
 
-export interface DistanceMatrixRequestParams {
+export type DistanceMatrixRequestParams = {
   /**
    * The starting point for calculating travel distance and time.
    * You can supply one or more locations separated by the pipe character (`|`), in the form of an address, latitude/longitude coordinates,
